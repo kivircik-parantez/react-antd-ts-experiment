@@ -1,14 +1,9 @@
-import {
-  DesktopOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { DesktopOutlined, TeamOutlined, UserOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Image, Layout, Menu } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo-small.jpg";
+import logo from "../../assets/logo.png";
 import { DATASHEET_ROUTE, HOME_ROUTE, TYPOGRAPHY_ROUTE } from "../../routes";
 import "./index.css";
 const { Sider } = Layout;
