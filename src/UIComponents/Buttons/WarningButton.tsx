@@ -8,7 +8,7 @@ const WarningButton: React.FC = () => {
   return (
     <Button
       style={{
-        backgroundColor: token.colorWarningBg,
+        backgroundColor: token.colorBgContainer,
         borderColor: token.colorWarningBorder,
         color: token.colorWarning,
       }}

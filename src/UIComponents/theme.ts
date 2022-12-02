@@ -108,7 +108,4 @@ export const theme: ThemeConfig = {
     colorBgContainerDisabled: "#fff",
     borderRadius: 4,
   },
-  components: {
-    Grid: {},
-  },
 };

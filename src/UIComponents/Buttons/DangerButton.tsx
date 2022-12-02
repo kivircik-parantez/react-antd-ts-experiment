@@ -1,8 +1,14 @@
-import { Button } from "antd";
+import { Button, ButtonProps, theme } from "antd";
 import React from "react";
 
-const DangerButton: React.FC = () => {
-  return <Button danger>Danger Default</Button>;
+interface IProps extends ButtonProps {}
+
+const DangerButton: React.FC<IProps> = (props) => {
+  return (
+    <Button danger {...props}>
+      Danger Default
+    </Button>
+  );
 };
 
 export default DangerButton;

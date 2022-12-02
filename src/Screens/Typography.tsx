@@ -8,7 +8,8 @@ const blockContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
 const TypographyScreen: React.FC = () => (
   <Typography>
     <Title>Introduction</Title>
-    <Paragraph>
+
+    <Paragraph style={{ fontWeight: 200 }}>
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -17,7 +18,7 @@ const TypographyScreen: React.FC = () => (
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum."
     </Paragraph>
-    <Paragraph>
+    <Paragraph style={{ fontWeight: 500 }}>
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

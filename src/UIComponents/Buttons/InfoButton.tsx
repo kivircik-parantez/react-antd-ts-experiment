@@ -8,7 +8,7 @@ const InfoButton: React.FC = () => {
   return (
     <Button
       style={{
-        backgroundColor: token.colorInfoBg,
+        backgroundColor: token.colorBgContainer,
         borderColor: token.colorInfoBorder,
         color: token.colorInfo,
       }}

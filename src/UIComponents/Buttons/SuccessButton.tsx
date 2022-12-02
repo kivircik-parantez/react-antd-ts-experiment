@@ -1,20 +1,28 @@
-import { Button, theme } from "antd";
+import { Button, ButtonProps, theme } from "antd";
 import React from "react";
 const { useToken } = theme;
 
-const SuccessButton: React.FC = () => {
+interface IProps extends ButtonProps {
+  dark?: boolean;
+}
+
+const SuccessButton: React.FC<IProps> = (props) => {
   const { token } = useToken();
 
   return (
     <Button
       style={{
-        backgroundColor: token.colorSuccessBg,
-        borderColor: token.colorSuccessBorder,
-        color: token.colorSuccess,
+        backgroundColor: props.dark
+          ? token.colorSuccess
+          : token.colorBgContainer,
+        borderColor:
+          props.type === "text" || props.type === "link"
+            ? ""
+            : token.colorSuccessBorder,
+        color: props.dark ? token.colorBgContainer : token.colorSuccess,
       }}
-    >
-      Success Button
-    </Button>
+      {...props}
+    />
   );
 };
 

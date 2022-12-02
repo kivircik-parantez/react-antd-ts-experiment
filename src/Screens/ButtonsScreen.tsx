@@ -1,5 +1,5 @@
 import { PoweroffOutlined, StarOutlined } from "@ant-design/icons";
-import { Button, Dropdown, MenuProps, Space, Tooltip } from "antd";
+import { Button, Dropdown, MenuProps, Space, Tooltip, Typography } from "antd";
 import React, { useState } from "react";
 import DangerButton from "../UIComponents/Buttons/DangerButton";
 import DefaultButton from "../UIComponents/Buttons/DefaultButton";
@@ -7,6 +7,7 @@ import InfoButton from "../UIComponents/Buttons/InfoButton";
 import LinkButton from "../UIComponents/Buttons/LinkButton";
 import SuccessButton from "../UIComponents/Buttons/SuccessButton";
 import WarningButton from "../UIComponents/Buttons/WarningButton";
+const { Title } = Typography;
 
 const onMenuClick: MenuProps["onClick"] = (e) => {
   console.log("click", e);
@@ -47,12 +48,14 @@ const ButtonsScreen: React.FC = () => {
 
   return (
     <Space direction="vertical">
+      <Title level={4}>Primary and Defaults</Title>
       <Space wrap>
         <Button type="primary">Primary Button</Button>
         <DefaultButton type="dashed">Dashed Button</DefaultButton>
         <DefaultButton type="text">Text Button</DefaultButton>
         <LinkButton>Link Button</LinkButton>
       </Space>
+      <Title level={4}>With Icons</Title>
       <Space wrap>
         <Tooltip title="search">
           <Button type="primary" shape="circle" icon={<StarOutlined />} />
@@ -81,6 +84,7 @@ const ButtonsScreen: React.FC = () => {
         </DefaultButton>
         <DefaultButton icon={<StarOutlined />} href="https://www.google.com" />
       </Space>
+      <Title level={4}>With Loading</Title>
       <Space wrap>
         <Button type="primary" loading>
           Loading
@@ -90,7 +94,6 @@ const ButtonsScreen: React.FC = () => {
         </Button>
         <Button type="primary" icon={<PoweroffOutlined />} loading />
       </Space>
-
       <Space wrap>
         <Button
           type="primary"
@@ -116,10 +119,11 @@ const ButtonsScreen: React.FC = () => {
       </Space>
       <Space>
         <Button type="primary">Primary</Button>
-        <Button type="primary" disabled>
+        <Button type="primary" disabled name="disabledButton">
           Primary(disabled)
         </Button>
       </Space>
+      <Title level={4}>Disabled</Title>
       <Space>
         <Button>Default</Button>
         <Button disabled>Default(disabled)</Button>
@@ -164,13 +168,14 @@ const ButtonsScreen: React.FC = () => {
           Danger Link(disabled)
         </Button>
       </Space>
+      <Title level={4}>Ghost</Title>
       <Space className="site-button-ghost-wrapper">
         <Button ghost>Ghost</Button>
         <Button ghost disabled>
           Ghost(disabled)
         </Button>
       </Space>
-
+      <Title level={4}>DropDown</Title>
       <Space>
         <Button type="primary">primary</Button>
         <Button>secondary</Button>
@@ -178,26 +183,38 @@ const ButtonsScreen: React.FC = () => {
           Actions
         </Dropdown.Button>
       </Space>
+      <Title level={4}>Danger Button</Title>
       <Space wrap>
-        <Button type="primary" danger>
+        <DangerButton type="primary" danger>
           Primary
-        </Button>
-        <Button danger>Default</Button>
-        <Button type="dashed" danger>
+        </DangerButton>
+        <DangerButton danger>Default</DangerButton>
+        <DangerButton type="dashed" danger>
           Dashed
-        </Button>
-        <Button type="text" danger>
+        </DangerButton>
+        <DangerButton type="text" danger>
           Text
-        </Button>
-        <Button type="link" danger>
+        </DangerButton>
+        <DangerButton type="link" danger>
           Link
-        </Button>
+        </DangerButton>
       </Space>
+      <Title level={4}>Success Button</Title>
+      <Space wrap>
+        <SuccessButton type="primary">Primary</SuccessButton>
+        <SuccessButton danger>Default</SuccessButton>
+        <SuccessButton type="dashed">Dashed</SuccessButton>
+        <SuccessButton type="text">Text</SuccessButton>
+        <SuccessButton type="link">Link</SuccessButton>
+        <SuccessButton dark>Dark Success Button</SuccessButton>
+      </Space>
+      <Title level={4}>Wrapped Buttons</Title>
       <Space wrap>
         <Button type="primary">Primary</Button>
         <DefaultButton>Default Button</DefaultButton>
         <WarningButton />
-        <SuccessButton />
+        <SuccessButton>Success Button</SuccessButton>
+        <SuccessButton dark>Dark Success Button</SuccessButton>
         <DangerButton />
         <InfoButton />
       </Space>
