@@ -206,7 +206,7 @@ const ButtonsScreen: React.FC = () => {
         <SuccessButton type="dashed">Dashed</SuccessButton>
         <SuccessButton type="text">Text</SuccessButton>
         <SuccessButton type="link">Link</SuccessButton>
-        <SuccessButton dark>Dark Success Button</SuccessButton>
+        <SuccessButton secondary>Dark Success Button</SuccessButton>
       </Space>
       <Title level={4}>Wrapped Buttons</Title>
       <Space wrap>
@@ -214,7 +214,7 @@ const ButtonsScreen: React.FC = () => {
         <DefaultButton>Default Button</DefaultButton>
         <WarningButton />
         <SuccessButton>Success Button</SuccessButton>
-        <SuccessButton dark>Dark Success Button</SuccessButton>
+        <SuccessButton secondary>Dark Success Button</SuccessButton>
         <DangerButton />
         <InfoButton />
       </Space>

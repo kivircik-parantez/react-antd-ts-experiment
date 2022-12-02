@@ -1,9 +1,11 @@
 import { Button, ButtonProps, theme } from "antd";
 import React from "react";
+import styles from "./index.module.scss";
 const { useToken } = theme;
 
 interface IProps extends ButtonProps {
-  dark?: boolean;
+  secondary?: boolean;
+  warning?: boolean;
 }
 
 const SuccessButton: React.FC<IProps> = (props) => {
@@ -12,14 +14,14 @@ const SuccessButton: React.FC<IProps> = (props) => {
   return (
     <Button
       style={{
-        backgroundColor: props.dark
+        backgroundColor: props.secondary
           ? token.colorSuccess
           : token.colorBgContainer,
         borderColor:
           props.type === "text" || props.type === "link"
             ? ""
             : token.colorSuccessBorder,
-        color: props.dark ? token.colorBgContainer : token.colorSuccess,
+        color: props.secondary ? token.colorBgContainer : token.colorSuccess,
       }}
       {...props}
     />
