@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Home",
+    "name": "home",
+    "route": "/",
+    "icon": "home"
+  }
+]
