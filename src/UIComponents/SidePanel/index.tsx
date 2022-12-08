@@ -1,13 +1,15 @@
 import { DesktopOutlined, TeamOutlined, UserOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Image, Layout, Menu } from "antd";
-import React, { useState } from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { DATASHEET_ROUTE, HOME_ROUTE, TYPOGRAPHY_ROUTE } from "../../routes";
-import "./index.css";
+import { BUTTONS_ROUTE, DATASHEET_ROUTE, TYPOGRAPHY_ROUTE } from "../../routes";
+import "./index.scss";
 const { Sider } = Layout;
-
+interface IProps {
+  collapsed: boolean;
+}
 type MenuItem = Required<MenuProps>["items"][number];
 
 function getItem(
@@ -28,7 +30,7 @@ const items: MenuItem[] = [
   getItem(
     "Buttons",
     "1",
-    <Link to={HOME_ROUTE}>
+    <Link to={BUTTONS_ROUTE}>
       <DesktopOutlined />
     </Link>
   ),
@@ -48,14 +50,20 @@ const items: MenuItem[] = [
   ),
 ];
 
-const SidePanel: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
-
+const SidePanel = (props: IProps): ReactElement => {
   return (
     <Sider
+      trigger={null}
       collapsible
-      collapsed={collapsed}
-      onCollapse={(value) => setCollapsed(value)}
+      collapsed={props.collapsed}
+      style={{
+        overflow: "auto",
+        height: "100vh",
+        position: "fixed",
+        left: 0,
+        top: 0,
+        bottom: 0,
+      }}
     >
       <Image src={logo} width={80} />
       <Menu

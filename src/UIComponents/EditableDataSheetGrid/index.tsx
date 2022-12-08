@@ -9,6 +9,7 @@ import {
 
 // Import the style only once in your app!
 import "react-datasheet-grid/dist/style.css";
+import PageContainer from "../PageContainer";
 import "./index.scss";
 
 const { useToken } = theme;
@@ -28,9 +29,11 @@ const EditableDataSheetGrid = () => {
   ];
 
   return (
-    <div className="testClass" style={{ borderColor: token.colorPrimary }}>
-      <DataSheetGrid value={data} onChange={setData} columns={columns} />
-    </div>
+    <PageContainer>
+      <div className="testClass" style={{ borderColor: token.colorPrimary }}>
+        <DataSheetGrid value={data} onChange={setData} columns={columns} />
+      </div>
+    </PageContainer>
   );
 };
 export default EditableDataSheetGrid;

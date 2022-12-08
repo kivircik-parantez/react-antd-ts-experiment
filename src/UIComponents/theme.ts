@@ -1,9 +1,10 @@
 import { ThemeConfig } from "antd/es/config-provider/context";
+import { ColorPalette } from "./colorPalette";
 
 export const theme: ThemeConfig = {
   token: {
-    colorPrimary: "#003598",
-    colorPrimaryBg: "#c3ced9",
+    colorPrimary: ColorPalette.BaseColors.Indigo600,
+    colorPrimaryBg: ColorPalette.Indigo.Indigo100,
     colorPrimaryBgHover: "#83a6cc",
     colorPrimaryBorder: "#83a6cc",
     colorPrimaryBorderHover: "#396cb3",
@@ -17,7 +18,7 @@ export const theme: ThemeConfig = {
     colorSuccessBorder: "#87cca6",
     colorSuccessBorderHover: "#60bf8e",
     colorSuccessHover: "#60bf8e",
-    colorSuccess: "#1ea669",
+    colorSuccess: ColorPalette.BaseColors.Green600,
     colorSuccessActive: "#118051",
     colorSuccessTextHover: "#3db37a",
     colorSuccessText: "#1ea669",
@@ -27,7 +28,7 @@ export const theme: ThemeConfig = {
     colorWarningBorder: "#ffeb91",
     colorWarningBorderHover: "#ffde69",
     colorWarningHover: "#ffde69",
-    colorWarning: "#f5b715",
+    colorWarning: ColorPalette.BaseColors.Yellow600,
     colorWarningActive: "#cf9008",
     colorWarningTextHover: "#ffcf40",
     colorWarningText: "#f5b715",
@@ -37,7 +38,7 @@ export const theme: ThemeConfig = {
     colorErrorBorder: "#ffd1d2",
     colorErrorBorderHover: "#faa5a9",
     colorErrorHover: "#ed7780",
-    colorError: "#e14c5d",
+    colorError: ColorPalette.BaseColors.Red600,
     colorErrorActive: "#ba364a",
     colorErrorTextHover: "#ed7780",
     colorErrorText: "#e14c5d",
@@ -47,12 +48,12 @@ export const theme: ThemeConfig = {
     colorInfoBorder: "#8deaf2",
     colorInfoBorderHover: "#60d6e6",
     colorInfoHover: "#60d6e6",
-    colorInfo: "#15a9cc",
+    colorInfo: ColorPalette.BaseColors.Blue600,
     colorInfoActive: "#0884a6",
     colorInfoTextHover: "#38c1d9",
     colorInfoText: "#15a9cc",
     colorInfoTextActive: "#0884a6",
-    colorText: "#101828",
+    colorText: ColorPalette.Gray.Gray800,
     colorTextSecondary: "rgba(16, 24, 40, 0.65)",
     colorTextTertiary: "rgba(16, 24, 40, 0.45)",
     colorTextQuaternary: "rgba(16, 24, 40, 0.25)",
@@ -104,8 +105,13 @@ export const theme: ThemeConfig = {
     lineHeightHeading4: 1.5,
     lineHeightHeading5: 1.375,
     fontSize: 14,
+    fontSizeSM: 12,
+    fontSizeXL: 16,
     fontFamily: "Poppins",
     colorBgContainerDisabled: "#fff",
     borderRadius: 4,
+  },
+  components: {
+    Button: {},
   },
 };
